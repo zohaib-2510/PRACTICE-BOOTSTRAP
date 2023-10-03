@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        width: 100%;
+        background-color: #183D3D;
+    }
+    #navlink{
+position: relative;
+color: white;
+font-weight: 700;
+}
+#navlink::after{
+content: "";
+position: absolute;
+width: 0%;
+height: 2.7px;
+background-color:  #0ecaca;
+left: 0;
+bottom: -4px;
+transition: ease .43s;
+}
+#navlink:hover::after{
+width: 100%;
+}
+#navlink:hover{
+    color: aqua;
+}
+.left
+{
+    width: 50%;
+    height: 100vh;
+    padding: 8% 1.5% 1% 1%;
+}
+.right
+{
+    width: 50%;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+h1{
+    color: #06fafa;
+    font-weight: 830;
+    font-size: 40px;
+
+}
+h2{
+    padding-top: 2.2%;
+font-size: 65px;
+font-weight: 880;
+    color: rgb(0, 255, 132);
+}
+#v{
+    border-bottom: 3.5px solid  rgb(0, 255, 132);
+
+}
+p{
+    font-size: 18px;
+    padding-top: 3.5%;
+    color: white;
+    font-weight: 650;
+}i{
+font-size: 35px;
+color: white;
+cursor: pointer;
+padding: 2.5%;
+transition: all ease-in-out;
+}
+i:hover{
+    color: #0ecaca;
+}
+@media (max-width:810px) {
+    .container{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+.left{
+    width: 100%;
+}
+.right{
+    width: 60%;
+display: flex;
+justify-content: center;
+}
+}
+@media (max-width:580px) {
+    .right{
+        width: 100%;
+    }
+    .right img{
+width: 96%;
+    }
+}
+@media (max-width:480px) {
+    .right{
+        width: 100%;
+        height: 50%;
+    }
+    .right img{
+        height: 10%;
+
+width: 96%;
+    }
+}
+</style>
+
+</head>
+<body>
+
+    <nav style="background: transparent; box-shadow: none;" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a style="color: white; font-weight: 700; font-size: 35px;" class="navbar-brand" href="#">PORTFOIO</a>
+          <button style="color: white;"
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a style="color: aqua;" id="navlink" class="nav-link active" href="#">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a id="navlink" class="nav-link active" href="#">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a id="navlink" class="nav-link active" href="#">PORTFOLIO</a>
+              </li>
+              <li class="nav-item">
+                <a id="navlink" class="nav-link active" href="#">LOGIN / SIGNUP</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<div class="container">
+<div class="left">
+<h1>Creative Product</h1>
+<h2><span id="v">Desi</span>g<span id="v">ner</span></h2>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt est voluptate tenetur fugiat minima saepe unde, voluptates rem doloremque sed architecto repellat dignissimos et nostrum consectetur itaque excepturi exercitationem nam.
+</p>
+<i class="fa-brands fa-tiktok"></i>
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-github"></i>
+<i class="fa-brands fa-linkedin"></i>
+</div>
+<div class="right">
+<img src="./me.png" alt="">
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js" integrity="sha512-rXm6RiYDlz+aZC/ht75tGzeAmCg4gVfBA6Be5s5uENSahiXkgwEy10J2Cc+dxUAW4lRRQYbS5pugMOqBrs8ksw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
